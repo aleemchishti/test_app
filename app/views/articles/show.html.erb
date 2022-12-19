@@ -1,0 +1,54 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<div class="container-xl">
+
+  <br><br>
+
+  <h1><%= @article.name%></h1>
+  <p>by: <%= @article.author_name%></p>
+  <div class="card" style="width: 80rem; font-size: 20px;">
+  <%= image_tag("Test/sb-blog-programming.png", class:"img-fluid")%>
+  <div class="card-body">
+    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non diam et mi dignissim semper ac vitae magna. Mauris tristique augue a urna commodo ornare. Praesent non tincidunt sapien, fringilla maximus odio. Phasellus dictum porta luctus. Sed pretium gravida nunc, eget luctus leo ultrices sit amet. Sed vitae molestie nisl, fringilla rutrum sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam bibendum quam eget consectetur consectetur. Pellentesque consequat suscipit dui non rutrum. Curabitur ac molestie ipsum. Vestibulum cursus imperdiet ullamcorper. Pellentesque sollicitudin elit non mauris sollicitudin, quis tristique lacus facilisis. Nulla facilisi. Aliquam erat volutpat. Nulla iaculis elementum orci non pharetra.
+
+Donec pretium viverra ipsum, ut efficitur ligula convallis at. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse egestas id erat non placerat. Vivamus rutrum, ligula eu molestie laoreet, mi risus pellentesque neque, non egestas leo enim varius elit. Mauris vitae turpis sed risus feugiat placerat. In convallis mauris vel nibh porta, sed congue leo efficitur. Aliquam interdum ornare orci, eget semper diam ultrices ac. Quisque vehicula bibendum metus sit amet suscipit. Vestibulum pretium semper magna, eu bibendum lorem faucibus vel. Praesent ornare tempus ipsum, non malesuada orci varius ut. Donec hendrerit blandit nulla porttitor eleifend. Nam mauris elit, ornare nec vehicula ac, egestas ac nisi. Ut ac consequat dui. Ut ligula enim, dictum ultricies cursus in, vulputate sit amet neque.
+
+Sed eget erat eget enim sagittis porta. Maecenas tincidunt arcu mi, nec rhoncus ex imperdiet non. Aliquam in dui eu velit dapibus vestibulum sed ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ultricies purus ut lorem lacinia porta. In feugiat, purus id posuere tempor, ex nibh hendrerit eros, nec feugiat sem metus congue sapien. Curabitur at pellentesque ligula, id aliquet libero. Donec pulvinar, eros id semper lobortis, risus ligula interdum turpis, et molestie enim enim vitae ipsum. Suspendisse tincidunt erat in metus blandit, ut aliquet sem laoreet. Vestibulum eu tincidunt lacus.
+
+Donec dapibus quam id mattis bibendum. Suspendisse potenti. Aenean tincidunt lorem elit, at laoreet ipsum vehicula quis. Aliquam eros odio, rutrum nec urna vel, ornare commodo augue. Vestibulum vulputate dictum urna, ac congue diam malesuada non. Maecenas suscipit turpis in nunc rutrum posuere tincidunt et turpis. Duis euismod fermentum luctus. Nullam vel pellentesque nunc, sit amet tristique nibh. Phasellus molestie auctor tristique. Sed sit amet viverra ligula, vel commodo sapien. Donec non eleifend nunc. Donec ornare pellentesque felis, vel pulvinar eros venenatis vel. Cras vestibulum lorem a quam tristique commodo. Nullam libero tortor, posuere vel maximus quis, varius ut sapien. Mauris id purus feugiat, fringilla enim quis, facilisis ante.
+
+Maecenas in orci facilisis nisl rutrum vestibulum. Phasellus maximus magna enim, nec pulvinar diam aliquet ac. Suspendisse auctor enim eget vehicula malesuada. Vestibulum accumsan lacus libero, in rhoncus tellus porttitor vel. Integer ut libero metus. Vivamus molestie, dui vel mollis placerat, odio magna euismod ligula, ac ultricies orci elit sit amet nisl. Nullam sem libero, efficitur nec pulvinar sed, fringilla ac erat. Nam viverra massa eu malesuada maximus. Nulla pharetra, tellus semper lobortis volutpat, nunc augue interdum lorem, efficitur iaculis nulla magna in est. Praesent fermentum lorem neque, et varius lacus aliquet ac. Nunc fermentum eu tortor vitae dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec eget ultrices mi, vitae porttitor tellus. Mauris egestas aliquet mattis. Aliquam erat volutpat. Phasellus sapien arcu, ultrices ac leo pretium, laoreet ornare eros.
+
+Generated 5 paragraphs, 576 words, 3959 bytes of Lorem Ipsum</p>
+<br>
+    <%= link_to "Back", articles_path(@articles), class: 'btn btn-primary'%>
+    <td><%= link_to 'Edit', edit_article_url(@article), class: 'btn btn-warning'%></td>
+  </div>
+</div>
+
+  <!-- <h1><%=@article.name%></h1>
+    <table>
+      <thead>
+        <table class="w3-table-all">
+        <tr class="w3-light-grey w3-hover-grey">
+          <th>Name</th>
+          <th>Description</th>
+          <th>AuhthorID</th>
+          <th colspan = '1'>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          <td> <%= @article.name%> </td>
+          <td> <%= @article.description %> </td>
+          <td> <%= @article.author_id %> </td>
+          <td><%= link_to 'Edit', edit_article_url(@article), class: 'btn btn-warning'%></td>
+      </tbody>
+    </table> 
+
+  <div class="row">
+      <div>
+    <%= link_to "Back", articles_path(@articles), class: 'btn btn-primary'%>
+    </div>
+  </div> -->
+</div>
