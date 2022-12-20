@@ -63,6 +63,6 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:name,:description,:author_id,:author_name)
+      params.require(:article).permit(:name,:description,:author_id,:author_name,:avatar)
     end
 end

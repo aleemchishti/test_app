@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_19_132734) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_20_112401) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,14 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_132734) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "articles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "description"
-    t.integer "author_id"
-    t.string "author_name"
-  end
+# Could not dump table "articles" because of following StandardError
+#   Unknown type 'attachment' for column 'avatar'
 
   create_table "authors", force: :cascade do |t|
     t.datetime "created_at", null: false
