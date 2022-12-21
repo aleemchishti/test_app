@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_20_112401) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_21_114807) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -42,12 +42,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_20_112401) do
 # Could not dump table "articles" because of following StandardError
 #   Unknown type 'attachment' for column 'avatar'
 
-  create_table "authors", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "author_name"
-    t.string "email"
-  end
+# Could not dump table "authors" because of following StandardError
+#   Unknown type 'attachment' for column 'image'
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"

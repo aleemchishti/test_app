@@ -4,6 +4,7 @@
 <div class="container">
 
   <br><br>
+
   <h1><%= @article.name%></h1>
   <p>Author: <b><%= @article.author_name%></b></p>
   <div class="card" style="width: 80rem; font-size: 20px;">
@@ -19,31 +20,4 @@
     <%= link_to "Back", articles_path(@articles), class: 'btn btn-primary'%>
     <td><%= link_to 'Edit', edit_article_url(@article), class: 'btn btn-warning'%></td>
   </div>
-</div>
-
-  <!-- <h1><%=@article.name%></h1>
-    <table>
-      <thead>
-        <table class="w3-table-all">
-        <tr class="w3-light-grey w3-hover-grey">
-          <th>Name</th>
-          <th>Description</th>
-          <th>AuhthorID</th>
-          <th colspan = '1'>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-          <td> <%= @article.name%> </td>
-          <td> <%= @article.description %> </td>
-          <td> <%= @article.author_id %> </td>
-          <td><%= link_to 'Edit', edit_article_url(@article), class: 'btn btn-warning'%></td>
-      </tbody>
-    </table> 
-
-  <div class="row">
-      <div>
-    <%= link_to "Back", articles_path(@articles), class: 'btn btn-primary'%>
-    </div>
-  </di
-  v> -->
 </div>
